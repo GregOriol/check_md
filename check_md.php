@@ -27,8 +27,7 @@ try {
 		exit(NAGIOS_UNKNOWN);
 	}
 
-	// exec('cat /proc/mdstat', $output, $return);
-	exec('cat ./tests/mdstat-check.txt', $output, $return);
+	exec('cat /proc/mdstat', $output, $return);
 	if ($return !== 0) {
 		echo 'Couldn\'t retrieve output from mdstat: returned '.$return."\n";
 		exit(NAGIOS_UNKNOWN);
