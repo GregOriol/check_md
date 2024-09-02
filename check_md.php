@@ -77,9 +77,9 @@ try {
 
 	$data = $arrays[$device];
 	if ($data['total'] === $data['ok']) {
-		$output .= $device.': OK '.$data['ok'].'/'.$data['total'];
+		$output .= 'MD OK: '.$device.' '.$data['ok'].'/'.$data['total'];
 	} else {
-		$output .= $device.': ERR '.$data['ok'].'/'.$data['total'];
+		$output .= 'MD ERROR: '.$device.' '.$data['ok'].'/'.$data['total'];
 
 		$status = NAGIOS_CRITICAL;
 	}
